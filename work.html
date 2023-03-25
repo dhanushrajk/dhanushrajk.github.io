@@ -48,8 +48,119 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#myImg {
+			border-radius: 5px;
+			cursor: pointer;
+			transition: 0.3s;
+		}
 
+		#myImg:hover {
+			opacity: 0.7;
+		}
+
+		/* The Modal (background) */
+		.modal {
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Sit on top */
+			padding-top: 100px;
+			/* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			height: 100%;
+			/* Full height */
+			overflow: visible;
+			/* Enable scroll if needed */
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.9);
+			/* Black w/ opacity */
+		}
+
+		/* Modal Content (image) */
+		.modal-content {
+			/* margin: auto; */
+			display: block;
+			/* width: 80%;
+			max-width: 700px;
+			height: 100%; */
+		}
+
+		/* Caption of Modal Image */
+		#caption {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+			text-align: center;
+			color: #ccc;
+			padding: 10px 0;
+			height: 150px;
+		}
+
+		/* Add Animation */
+		.modal-content,
+		#caption {
+			-webkit-animation-name: zoom;
+			-webkit-animation-duration: 0.6s;
+			animation-name: zoom;
+			animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+			from {
+				-webkit-transform: scale(0)
+			}
+
+			to {
+				-webkit-transform: scale(1)
+			}
+		}
+
+		@keyframes zoom {
+			from {
+				transform: scale(0)
+			}
+
+			to {
+				transform: scale(1)
+			}
+		}
+
+		/* The Close Button */
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 35px;
+			color: #f1f1f1;
+			font-size: 40px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		/* 100% Image Width on Smaller Screens */
+		@media only screen and (max-width: 700px) {
+			.modal-content {
+				width: 100%;
+			}
+		}
+	</style>
 </head>
+
 
 <body>
 	<div id="colorlib-page">
@@ -89,6 +200,13 @@
 		<div id="colorlib-main">
 			<div class="colorlib-work">
 				<div class="colorlib-narrow-content">
+					<div id="myModal" class="modal">
+						<span class="close">&times;</span>
+						<img class="modal-content" style="object-fit: contain;
+						height: 100%;
+						width: inherit;background-color: transparent;" id="img01">
+						<div id="caption"></div>
+					</div>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
 							data-animate-effect="fadeInLeft">
@@ -112,74 +230,58 @@
 							addition of hundred and thirty
 							square feet water body.</p>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/webste/edt/work3.jpg);">
-							</div>
+							<!-- <div class="project" style="background-image: url(images/webste/edt/work3.jpg);">
+							</div> -->
+							<img id="myImg" src="images/webste/edt/work3.jpg" alt="Snow" class="project"
+								style="object-fit: cover;">
 						</div>
 						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/webste/edt/work2.jpg);">
-							</div>
-						</div>
-						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/webste/edt/work1.jpg);">
+							<img id="myImg" src="images/webste/edt/work2.jpg" alt="Snow" class="project"
+								style="object-fit: cover;">
 
-							</div>
 						</div>
 						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/webste/edt/work4.jpg);">
-							</div>
+							<img id="myImg" src="images/webste/edt/work1.jpg" alt="Snow" class="project"
+								style="object-fit: cover;">
 						</div>
 						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/webste/edt/work6.jpg);">
-							</div>
+							<img id="myImg" src="images/webste/edt/work4.jpg" alt="Snow" class="project"
+								style="object-fit: cover;">
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<img id="myImg" src="images/webste/edt/work6.jpg" alt="Snow" class="project"
+								style="object-fit: cover;">
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/webste/edt/work5.jpg);">
-							</div>
+							<img id="myImg" src="images/webste/edt/work5.jpg" alt="Snow" class="project"
+								style="object-fit: cover;">
 						</div>
 
 
 						<h4 style="padding-left:10px;">2. JIHAD'S HOME</h4>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/DSC08949h.jpg);">
-							</div>
+							<img id="myImg" src="images/DSC08949h.jpg" alt="Snow" class="project"
+								style="object-fit: cover;">
+
 						</div>
 						<!-- <div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
 							<div class="project" style="background-image: url(images/work8.jpeg);">
 							</div>
 						</div> -->
 						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/work9.jpeg);">
+							<img id="myImg" src="images/work9.jpeg" alt="Snow" class="project"
+								style="object-fit: cover;">
 
-							</div>
 						</div>
 						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/work7.jpeg);">
-							</div>
+							<img id="myImg" src="images/work7.jpeg" alt="Snow" class="project"
+								style="object-fit: cover;">
 						</div>
-						<!--	<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/img-5.jpg);">
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/img-6.jpg);">
-							</div>
-						</div> -->
-						<!-- <div class="row">
-							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-								<ul class="pagination">
-									<li class="disabled"><a href="#">&laquo;</a></li>
-									<li class="active"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">&raquo;</a></li>
-								</ul>
-							</div>
-						</div> -->
+
 					</div>
 				</div>
 
-				<div id="get-in-touch" class="colorlib-bg-color">
+				<!-- <div id="get-in-touch" class="colorlib-bg-color">
 					<div class="colorlib-narrow-content">
 						<div class="row">
 							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
@@ -196,9 +298,31 @@
 
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
+		<!-- The Modal -->
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			document.querySelectorAll('.project').forEach(function (image) {
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				image.onclick = function () {
+					modal.style.display = "block";
+					modalImg.src = this.src;
+					captionText.innerHTML = this.alt;
+				}
+
+				var span = document.getElementsByClassName("close")[0];
+
+				span.onclick = function () {
+					modal.style.display = "none";
+				}
+			});
+		</script>
 
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
